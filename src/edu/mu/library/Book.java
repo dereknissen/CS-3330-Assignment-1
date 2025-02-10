@@ -1,6 +1,8 @@
 package edu.mu.library;
 
 
+/* Test commit */
+
 public class Book {
 	
 	private String title;
@@ -69,7 +71,7 @@ public class Book {
 		}
 		
 		/* Compare the books */
-		if (this.ISBN == other.getISBN()) {
+		if (this.ISBN == ((Book)other).getISBN()) {
 			return true;
 		} else {
 			return false;
