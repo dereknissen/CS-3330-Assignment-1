@@ -60,7 +60,7 @@ public class Book {
 	 * @param other
 	 * @return
 	 */
-	public boolean equals(Book other) {
+	public boolean equals(Object other) {
 		
 		/* If other book does not exist, cancel comparison */
 		if (other == null) {
@@ -69,11 +69,20 @@ public class Book {
 		}
 		
 		/* Compare the books */
-		if (this.ISBN == other.ISBN) {
+		if (this.ISBN == other.getISBN()) {
 			return true;
 		} else {
 			return false;
 		}
+	}
+	
+	/**
+	 * This method prints the book object in a readable (String) format.
+	 * @return 
+	 */
+	public String toString() {
+		return "Book [title = " + this.title + ", author = " + this.author + ", price = " + this.price + ","
+				+ " ISBN = " + this.ISBN + "]";
 	}
 	
 	
