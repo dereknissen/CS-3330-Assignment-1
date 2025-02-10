@@ -34,6 +34,25 @@ public class Book {
 		this.price = price;
 	}
 	
+	/**
+	 * This is a copy constructor that will allow you to create a 
+	 * Book object given an original Book object.
+	 * @param original
+	 */
+	public Book(Book original) {
+		
+		/* If the original book does not exist, cancel copy. */
+		if (original == null) {
+			System.out.println("Fatal error.");
+			System.exit(0);
+		}
+		
+		this.title = original.title;
+		this.author = original.author;
+		this.ISBN = original.ISBN;
+		this.price = original.price;
+	}
+	
 	
 	/* Getters and setters */
 
