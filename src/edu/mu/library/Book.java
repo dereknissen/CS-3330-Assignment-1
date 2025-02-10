@@ -53,6 +53,21 @@ public class Book {
 		this.price = original.price;
 	}
 	
+	/** 
+	 * This method compares another book to the currently accessed Book object through the
+	 * ISBN. Returns true if the books are equivalent, otherwise false.
+	 * 
+	 * @param other
+	 * @return
+	 */
+	public boolean equals(Book other) {
+		if (this.ISBN == other.ISBN) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	
 	/* Getters and setters */
 
