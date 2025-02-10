@@ -61,6 +61,14 @@ public class Book {
 	 * @return
 	 */
 	public boolean equals(Book other) {
+		
+		/* If other book does not exist, cancel comparison */
+		if (other == null) {
+			System.out.println("Fatal error.");
+			System.exit(0);
+		}
+		
+		/* Compare the books */
 		if (this.ISBN == other.ISBN) {
 			return true;
 		} else {
