@@ -31,27 +31,31 @@ public class Library {
 				return true;
 			}
 		}
+		System.out.println("Book does not exist.");
 		return false;
 	}
 	
 	public Book searchByISBN(String ISBN) {
+		System.out.println("Searching for book with ISBN: " + ISBN);
 		for (int i = 0; i < count; i++) {
 			if (books[i].getISBN().equals(ISBN)) {
 				return books[i];
 			}
 		}
-		System.out.println("Test");
+		System.out.println("Book not found.");
 		return null;
 	}
 	
 	public void displayBooks() {
 		if (count == 0) {
-			System.out.println("No books to print");
+			System.out.println("No books to print.\n");
 		}
 		else {
+			System.out.println("All books in the library: ");
 			for (int i = 0; i < count; i++) {
-				System.out.println(books[i].toString());
+				System.out.println((i+1) + ". " + books[i].toString());
 			}
+			System.out.println();
 		}
 	}
 }

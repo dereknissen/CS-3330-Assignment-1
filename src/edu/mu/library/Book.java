@@ -83,8 +83,8 @@ public class Book {
 	 * @return 
 	 */
 	public String toString() {
-		return "Book [title = " + this.title + ", author = " + this.author + ", price = " + this.price + ","
-				+ " ISBN = " + this.ISBN + "]";
+		return this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" 
+				+ this.price + ")";
 	}
 	
 	
