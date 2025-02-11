@@ -4,11 +4,21 @@ public class Library {
 	private Book[] books;
 	private int count;
 	
+	/**
+	 * Default constructor for Library object
+	 */
 	public Library() {
 		books = new Book[5];
 		count = 0;
 	}
 	
+	/**
+	 * This method adds a book to the library. The book must be passed as a parameter.
+	 * Returns false if the library is already full of books. Otherwise, returns true if the
+	 * book was successfully added.
+	 * @param book
+	 * @return
+	 */
 	public boolean addBook(Book book) {
 		if (count > 4) {
 			return false;
@@ -20,6 +30,13 @@ public class Library {
 		}
 	}
 	
+	/**
+	 * This method removes a book from the library. The book must be passed as a parameter.
+	 * Returns false if the book does not exist in the library. Otherwise, returns true if the
+	 * removal was successful.
+	 * @param book
+	 * @return
+	 */
 	public boolean removeBook(Book book) {
 		for (int i = 0; i < count; i++) {
 			if (books[i].equals(book)) {
@@ -35,6 +52,12 @@ public class Library {
 		return false;
 	}
 	
+	/**
+	 * This method searches for a book in the library given an ISBN. The ISBN must be passed as a String parameter.
+	 * Returns null if the book was not found. Otherwise, it returns the book object.
+	 * @param ISBN
+	 * @return
+	 */
 	public Book searchByISBN(String ISBN) {
 		System.out.println("Searching for book with ISBN: " + ISBN);
 		for (int i = 0; i < count; i++) {
@@ -46,6 +69,10 @@ public class Library {
 		return null;
 	}
 	
+	/**
+	 * This method displays all of the books in the library in a readable format.
+	 * If there are no books in the library, it will print: "No books to print."
+	 */
 	public void displayBooks() {
 		if (count == 0) {
 			System.out.println("No books to print.\n");
